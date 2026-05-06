@@ -164,7 +164,7 @@
   164  git clone https://github.com/CITA/CTA200H.git
   165  ls
   166  pwd
-  167  jupyter notebook --port=5906 --no-browser
+  167* 
   168  pwd
   169  git init
   170  touch README.md
@@ -207,4 +207,63 @@
   207  history
   208  ls
   209  history -a
-  210  history > history.txt
+  210  ssh -L 5906:localhost:5906 cosmo3
+  211  ssh -L 5906:localhost:5906 cosmo2
+  212  ssh -L 5906:localhost:5906 cosmo1
+  213  ssh -L 5906:localhost:5906 cosmo4
+  214  ssh -L 5906:localhost:5906 cosmo8
+  215  history > history.txt
+  216  ls
+  217  git remote add origin https://github.com/daisyg2012/assignment_1.git
+  218  git remove -v
+  219  git remote -v
+  220  git remote set-url origin https://github.com/daisyg2012/assignment_1.git
+  221  git add .
+  222  git commit -m "Added README.md, and history.txt file; no Hello_world.c or .py yet."
+  223  git push
+  224  find /home/murray/ -name "Hello_world.*" 2/dev/null
+  225  find /home/murray/ -name "Hello_world.*" 2>/dev/nul
+  226  pwd
+  227  ls
+  228  cta_@026
+  229  cd cta_2026
+  230  cd CTA_2026/
+  231  pwd
+  232  ls
+  233  cd assignment_1/
+  234  pwd
+  235   cp /home/murray/tmp/Hello_word.py /home/dgracehv/CTA_2026/assignment_1
+  236   cp /home/murray/tmp/Hello_world.py /home/dgrachev/CTA_2026/assignment_1
+  237   cp /home/murray/tmp/Hello_world.c /home/dgrachev/CTA_2026/assignment_1
+  238   cp /home/murray/Papers/Hello_world.c /home/dgrachev/CTA_2026/assignment_1
+  239   cp /home/murray/Papers/tmp/Hello_world.c /home/dgrachev/CTA_2026/assignment_1
+  240  pwd
+  241  ls
+  242  mv Hello_world.c Hello_world_grachev.c
+  243  mv Hello_world.py Hello_world_grachev.c
+  244  mv Hello_world.py Hello_world_grachev.py
+  245  ls
+  246  gcc
+  247  module load c
+  248  module load gcc
+  249  gcc Hello_world_yourlastname.c -o Hello_world.x
+  250  gcc Hello_world_grachev.c -o Hello_world.x
+  251  ./Hello_world.x
+  252  python Hello_world_grachev.py
+  253  ls
+  254  vi Hello_world_yourlastname.c
+  255  ls
+  256  vi Hello_world_grachev.c
+  257  ./Hello_world.x
+  258  gcc Hello_world_grachev.c -o Hello_world.x
+  259  ./Hello_world.x
+  260  vi Hello_world_grachev.py
+  261  ./Hello_world.x
+  262  python Hello_world_grachev.py
+  263  ./Hello_world.x > output_c.txt
+  264  python Hello_world_yourlastname.py > output_python.txt
+  265  python Hello_world_grachev.py > output_python.txt
+  266  l
+  267  ls
+  268  history
+  269  history > history.txt
