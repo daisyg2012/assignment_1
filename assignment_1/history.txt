@@ -1,0 +1,210 @@
+    1  q
+    2  cd ..
+    3  ls
+    4  cd ehornecker
+    5  ls
+    6  cd ..
+    7  ls
+    8  cd grachevd
+    9  q
+   10  logout
+   11  vncserver
+   12  ls
+   13  ls downloads
+   14  cd downloads
+   15  cd Downloads
+   16  ls
+   17  cd ..
+   18  code .
+   19  mkdir
+   20  mkdir CTA_2026
+   21  cd CTA_2026
+   22  ls
+   23  cd ..
+   24  ls
+   25  cd CTA_2026
+   26  cd /mnt/scratch/dgrachev
+   27  cd /mnt/scratch-cluster/dgrachev
+   28  cd /mnt/scratch-clustre/dgrachev
+   29  cd /mnt/scratch-lustre/dgrachev
+   30  cd ..
+   31  cd /mnt/scratch-lustre/dgrachev
+   32  cd ..
+   33  ls
+   34  cd /mnt/scratch-lustre/dgrachev
+   35  pwd
+   36  mkdir CTA200_2025
+   37  cd CTA200_2025
+   38  mkdir assignment_1 
+   39  cd assignment_1
+   40  cd ..
+   41  pwd
+   42  git clone https://github.com/CITA/CTA200H.git
+   43  ls
+   44  cd cta200h
+   45  cd CTA
+   46  cd CTA200H
+   47  ls
+   48  cd lecture_1_linux_git
+   49  ls
+   50  cd ..
+   51  ls
+   52  cd ..
+   53  ls
+   54  cd assignment_1
+   55  touch README.md
+   56  vi README.md # CTA200 2025
+   57  ls
+   58  vi README.md # CTA200 2025
+   59  ls
+   60  pwd
+   61  ls
+   62  cd .
+   63  cd ..
+   64  ls
+   65  cd CTA200H
+   66  git remote set-url origin https://github.com/daisyg2012/CTA200H
+   67  pwd
+   68  cp /mnt/scratch-lustre/murray/Hello_world.cpp
+   69  cp --help
+   70  cp /mnt/scratch-lustre/murray/Hello_world.cpp -t /mnt/scratch-lustre/dgrachev/assignment_1
+   71  pwd 
+   72  ls
+   73  cp /mnt/scratch-lustre/murray/Hello_world.cpp -t /mnt/scratch-lustre/dgrachev/CTA200_2025/assignment_1
+   74  cp /mnt/scratch-lustre/murray/Hello_world.c -t /mnt/scratch-lustre/dgrachev/CTA200_2025/assignment_1
+   75  find /mnt/scratch-lustre/murray/Hello_world.c
+   76  pwd
+   77  cd ..
+   78  pwd
+   79  git init
+   80  git config --global init.defaultBranch main
+   81  touch README.md
+   82  git commit -m "Added README.md"
+   83  git add .
+   84  git commit -m "Added README.md"
+   85  git push
+   86  git remote add master https://github.com/daisyg2012/CTA200H_assignments.git
+   87  git push master
+   88  git push --set-upstream master master
+   89  git remote set-url origin https://github.com/daisyg2012/CTA200H_assignments.git
+   90  git status
+   91  ls
+   92  git log
+   93  git push --set-upstream master master
+   94  .ssh
+   95  home/.ssh
+   96  CTA200H % cd
+   97  ls
+   98  cd
+   99  cd ..
+  100  ls
+  101  cd murray
+  102  ls
+  103  find Hello_world.c
+  104  ls
+  105  find " Hello_world.c"
+  106  ls
+  107  cd ..
+  108  cd /mnt/scratch-lustre/dgrachev
+  109  ls
+  110  cd CTA200_2025
+  111  ls
+  112  cd assignment_1
+  113  git add.
+  114  git push .
+  115  git push --set-upstream . master
+  116  git add .
+  117  git commit -m "Added README.md"
+  118  git push 
+  119  ls 
+  120  git status
+  121  git log
+  122  git add .
+  123  logout
+  124  ssh -g -L5906:cosmo6:5906 dgrachev@gw.cita.utoronto.ca
+  125  ssh -g -L5906:cosmo8:5906 dgrachev@gw.cita.utoronto.ca
+  126  ssh cosmo8.cita.utoronto.ca
+  127  cd /mnt/scratch-lustre/dgrachev
+  128  ls
+  129  cd ~
+  130  ls
+  131  cd CTA_2026
+  132  ls
+  133  cd
+  134  cd ~
+  135  ls
+  136  module load python/3.10.2
+  137  jupyter notebook --port=5906 --no-browser
+  138  logout
+  139  jupyter notebook --port-5906 --no-browser
+  140  ssh -L 5906:localhost:5906 cosmo8
+  141  logout
+  142  ssh -L 5906:localhost:5906 dgrachev@cosmo8
+  143  jupyter notebook --port-5906 --no-browser
+  144  module load python/3.10.2
+  145  jupyter notebook --port-5906 --no-browser
+  146  jupyter notebook --port=5906 --no-browser
+  147  ls
+  148  cd CTA_2026
+  149  ls
+  150  jupyter notebook --port=5906 --no-browser
+  151  ls
+  152  cd ..
+  153  ls
+  154  jupyter notebook --port=5906 --no-browser
+  155  cd dgrachev
+  156  ls
+  157  jupyter notebook --port=5906 --no-browser
+  158  cd CTA_2026
+  159  cd -
+  160  cd CTA_2026/
+  161  ;s
+  162  ls
+  163  git git clone https://github.com/CITA/CTA200H.git
+  164  git clone https://github.com/CITA/CTA200H.git
+  165  ls
+  166  pwd
+  167  jupyter notebook --port=5906 --no-browser
+  168  pwd
+  169  git init
+  170  touch README.md
+  171  git add .
+  172  git commit -m "Added README.md"
+  173  git remote add origin https://github.com/daisyg2012/CTA200H_assignments.git
+  174  git branch -M main
+  175  git push -u origin main
+  176  ssh -L 5906:localhost:5906 dgrachev@cosmo8
+  177  ls
+  178  cd CTA_2026
+  179  ls
+  180  vi README.md 
+  181  cat README.md
+  182  ls
+  183  cd CTA200H
+  184  ls
+  185  cd ..
+  186  pwd
+  187  mkdir assignment_1
+  188  ls
+  189  cp README.md assignment_1/
+  190  cd assignment_1
+  191  ls
+  192  find /home/murray -name "Hello_world.c"
+  193  pwd
+  194  ls
+  195  cd ..
+  196  ls
+  197  cd murray
+  198  ls
+  199  cd ..
+  200  ls
+  201  cd grachevd
+  202  cd dgrachev
+  203  ls
+  204  cd CTA_2026
+  205  ls
+  206  cd assignment_1
+  207  history
+  208  ls
+  209  history -a
+  210  history > history.txt
