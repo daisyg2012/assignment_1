@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath} 
+
+\begin{document}
+
+\section{Question 1: The Mandelbrot Set}
+In this question, we were asked to, given a range of $x$ and $y$ values in the complex plane, iterate over the quadratic equation: $z_{i+1} = z_i^2 + c$, where $c \in \{ x + iy \mid x, y \in (-2, 2) \}$.
+
+\subsection{Methods}
+The required iteration was done through defining the function \textit{complex\_iterations}, which took the following parameters: \textit{x\_min, y\_min, x\_max, y\_max}, (optional parameter) \textit{test\_pts}, and (optional parameter) \textit{iterations}. Non-optional parameters are to define the bounds of the complex plane. The optional parameter, \textit{test\_pts}, is used to determine the number of sample points along each axis, while \textit{iterations} specifies the maximum number of iterations performed.\\
+\\
+With these parameters, we create our linspace and define a standard grid, where $X$ is the real part of a complex number, $c$, and $Y$ is the imaginary. To determine what points remain bounded, and which run off to infinity, we iterate for $i$ in \textit{iterations}. For each iteration, the recurrence relation
+\[
+z_{i+1} = z_i^2 + c
+\]
+is applied across the complex grid. After every update, points with magnitude greater than 2 are marked as diverged in a boolean array, and the iteration at which this occurs is stored, while points that never diverge are classified as bounded.
+
+\subsection{Findings}
+Using 500 test points and 10,000 iterations, the image produced by \textit{complex\_iterations} is the characteristic Mandelbrot fractal.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\linewidth]{3.png}
+    \caption{The Mandelbrot Set generated with 10,000 iterations.}
+    \label{fig:placeholder}
+\end{figure}
+
+\section{Question 2: Lorenz Equations}
+In this question, we were asked to create a function that defines three Lorenz equations, solve said equations using SciPy's \textit{solve\_ivp}, and plot the result.
+
+\subsection{Methods}
+Lorenz' equations were defined in \textit{lorenz\_eqns}, a function dependent on time, state, and with three constant parameters: $\sigma$, $\mathrm{b}$, and $\mathrm{r}$. The following three equations were defined:
+
+\begin{align}
+    \dot{X} &= -\sigma(X - Y) \\
+    \dot{Y} &= \mathrm{r}X - Y - XZ \\
+    \dot{Z} &= -\mathrm{b}Z + XY
+\end{align}
+
+These equations were then solved using\textit{ solve\_ivp} from the SciPy library. 
+\subsection{Findings}
+Plotting the \textit{y}-component of the IVP solution, \textit{W}, using three successive intervals of 1000 iterations and Lorenz’ discrete time variable,
+\[
+N = \frac{t}{\Delta t}, \qquad \Delta t = 0.01,
+\]
+successfully reproduced Figure 1 of Lorenz’ \textit{Deterministic Nonperiodic Flow}, shown in Figure 2.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{2.png}
+    \caption{Reproduction of Lorenz' Figure 1}
+    \label{fig:lorenz_fig1}
+\end{figure}
+
+Projecting the solution onto the YZ and XY planes reproduced the characteristic structure shown in Figure 2 of Lorenz’ \textit{Deterministic Nonperiodic Flow}, as displayed in Figure 3.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{image.png}
+    \caption{Reproduction of Lorenz' Figure 2}
+    \label{fig:lorenz_fig2}
+\end{figure}
+
+Using a slightly different initial condition produced a second solution, \textit{W'}. The semi-logarithmic plot of the separation distance between \textit{W'} and \textit{W} is shown in Figure 4, illustrating the sensitive dependence on initial conditions.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{1.png}
+    \caption{Semi-logarithmic plot of the separation between \textit{W'} and \textit{W}}
+    \label{fig:separation}
+\end{figure}
+\end{document}
